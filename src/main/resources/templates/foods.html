@@ -5,6 +5,22 @@
     <title>Foods</title>
 </head>
 <body>
+<h1>New Food</h1>
+<form data-th-action="@{/foods}" data-th-object="${newFood}" method="post">
+    <table>
+        <tr>
+            <th>Név:</th>
+            <td><input type="text" data-th-field="*{name}" /></td>
+        </tr>
+        <tr>
+            <th>Mennyiség:</th>
+            <td><input type="number" data-th-field="*{quantity}" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Create order</button></td>
+        </tr>
+    </table>
+</form>
 <h1>Food orders:</h1>
     <table>
         <tr>

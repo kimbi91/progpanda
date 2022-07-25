@@ -5,18 +5,34 @@
     <title>Drinks</title>
 </head>
 <body>
-    <h1>Drink orders:</h1>
+<h1>New Drink</h1>
+<form data-th-action="@{/drinks}" data-th-object="${newDrink}" method="post">
     <table>
         <tr>
-            <th>ID:</th>
-            <th>Name:</th>
-            <th>Quantity:</th>
+            <th>Név:</th>
+            <td><input type="text" data-th-field="*{name}" /></td>
         </tr>
-        <tr data-th-each="drink: ${drinks}">
-            <td data-th-text="${drink.id}"></td>
-            <td data-th-text="${drink.name}"></td>
-            <td data-th-text="${drink.quantity}"></td>
+        <tr>
+            <th>Mennyiség:</th>
+            <td><input type="number" data-th-field="*{quantity}" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit">Create order</button></td>
         </tr>
     </table>
+</form>
+<h1>Drink orders:</h1>
+<table>
+    <tr>
+        <th>Id:</th>
+        <th>Name:</th>
+        <th>Quantity:</th>
+    </tr>
+    <tr data-th-each="drink: ${drinks}">
+        <td data-th-text="${drink.id}"></td>
+        <td data-th-text="${drink.name}"></td>
+        <td data-th-text="${drink.quantity}"></td>
+    </tr>
+</table>
 </body>
 </html>
