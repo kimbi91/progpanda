@@ -24,7 +24,7 @@ public class FoodController {
     }
 
     @GetMapping(value = {"/delivery"})
-    public String displayConditions() {
+    public String getDelivery() {
         return "delivery";
     }
 }
