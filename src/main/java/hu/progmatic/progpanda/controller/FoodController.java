@@ -1,7 +1,6 @@
 package hu.progmatic.progpanda.controller;
 
 
-import hu.progmatic.progpanda.model.Drink;
 import hu.progmatic.progpanda.model.Food;
 import hu.progmatic.progpanda.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
