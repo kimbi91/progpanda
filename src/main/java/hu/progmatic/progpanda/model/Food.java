@@ -7,7 +7,6 @@ public class Food {
     private int quantity;
 
     public Food() {
-
     }
 
     public Food(Integer id, String name, int quantity) {
