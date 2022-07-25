@@ -16,8 +16,8 @@ public class FoodService {
     private Map<Integer, Food> foods = new TreeMap<>();
 
     public FoodService() {
-        saveFood(new Food(null, "Bread", 2));
-        saveFood(new Food(null, "Meat", 3));
+        saveFood(new Food(null, "Pizza", 2));
+        saveFood(new Food(null, "Hamburger", 3));
     }
 
     public List<Food> getAll() {
